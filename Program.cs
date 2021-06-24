@@ -13,6 +13,7 @@ namespace testApp
                 string name = Console.ReadLine();
                 string text = System.IO.File.ReadAllText(name);
                 string[] splittext = text.Split('\n');
+                // create array list for valid and invalid emails.
                 ArrayList valid = new ArrayList();
                 ArrayList invalid = new ArrayList();
                 foreach(string line in splittext)
