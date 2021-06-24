@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*      
+    Bibek Siwakoti
+    06/24/2021
+    Techincal Assignment for GDC
+*/
+using System;
 using System.IO;
 using System.Collections;
 namespace testApp
@@ -16,11 +21,14 @@ namespace testApp
                 // create array list for valid and invalid emails.
                 ArrayList valid = new ArrayList();
                 ArrayList invalid = new ArrayList();
+                //split text into lines
                 foreach(string line in splittext)
                 {
+                    //split lines into values
                     string[] splitline = line.Split(',');
                     if(splitline.Length >= 3)
                     {   
+                        //assume third value is email
                         string email = splitline[2];
                         if(email.Contains('@') && email.Contains('.')) 
                         {
