@@ -32,6 +32,7 @@ namespace testApp
                     {   
                         //assume third value is email
                         string email = splitline[2];
+                        //use Regular Expessions
                         Regex regex = new Regex(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([azA-Z]{2,4}|[0-9]{1,3})(\]?)$");  
                         Match match = regex.Match(email);  
                         if(match.Success) 
@@ -45,6 +46,7 @@ namespace testApp
                     }                   
 
                 } 
+                //print out results
                 Console.WriteLine("Valid Emails");              
                 foreach(string email in valid) 
                 {
@@ -58,6 +60,7 @@ namespace testApp
             }
             catch 
             {
+                //let people write the file name
                 Console.WriteLine("Invalid file name, Try again.");
                 return;
             }
